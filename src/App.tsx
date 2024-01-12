@@ -35,13 +35,17 @@ function App() {
 
   const openModal = () => {
     setOpen(true);
-  }
+  };
   return (
     <>
       <h1>Command Key Demostration</h1>
       <button onClick={openModal}>Open modal</button>
 
-      <Command open={open} onClose={() => setOpen(false)}>
+      <Command
+        open={open}
+        onClose={() => setOpen(false)}
+        containerClassName="[background: #000000]"
+      >
         <CommandInput placeholder="Search" onChange={filterBySearch} />
 
         <CommandList>

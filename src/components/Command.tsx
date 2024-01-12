@@ -5,7 +5,6 @@ export const Command = ({
   open,
   onClose,
   className = '',
-  backgroundForModal = 'rgba(0,0,0,0.5)',
   containerClassName = '',
   children,
 }: {
@@ -13,7 +12,6 @@ export const Command = ({
   onClose: () => void;
   className?: string;
   containerClassName?: string;
-  backgroundForModal?: string;
   children: React.ReactNode;
 }) => {
   const escFunction = useCallback((event: KeyboardEvent) => {
@@ -32,7 +30,7 @@ export const Command = ({
 
   return open ? (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center [background-color:${backgroundForModal}] ${containerClassName}`}
+      className={`fixed inset-0 z-50 flex items-center justify-center [background-color:rgba(0,0,0,0.5)] ${containerClassName}`}
     >
       <div
         className={`w-full max-w-md text-white border bg-zinc-900 border-zinc-800 rounded-md ${className}`}
