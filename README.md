@@ -1,4 +1,6 @@
 # Command Key
+A simple command menu for React.
+
 > [!CAUTION]
 > Pre Alpha Stage, Use it at your own risk.
 
@@ -38,7 +40,7 @@ export default {
 ```
 
 index.css (Your global CSS file in your project)
-```
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -132,3 +134,8 @@ export default function App() {
   );
 }
 ```
+
+## Coming Soon...
+[x] Add a search filter
+[ ] Tailwind Customization
+[ ] Animations

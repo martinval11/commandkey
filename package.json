@@ -1,6 +1,6 @@
 {
   "name": "commandkey",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -40,7 +40,7 @@
       "require": "./dist/index.cjs"
     }
   },
-  "keywords": ["toast", "react-toast", "toaster"],
+  "keywords": ["commandkey", "key", "keybinding", "popup", "search"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/martinval11/commandkey/issues"
