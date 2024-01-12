@@ -13,12 +13,12 @@ A simple command menu for React.
 ## Setup
 
 ### Install
-```
+```bash
 npm install commandkey
 ```
 
 ### Setup TailwindCSS if you don't already have it
-```
+```bash
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
