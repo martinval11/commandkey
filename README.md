@@ -124,7 +124,7 @@ bun dev
 
 - [React](https://react.dev/)
 
-## Coming Soon...
+## To Do
 
 - [x] Add a search filter
 - [x] Styles Customization
