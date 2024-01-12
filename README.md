@@ -48,7 +48,7 @@ export default function App() {
   );
 }
 ```
-If you want to see more examples, go to [EXAMPLES.md](EXAMPLES.md)
+If you want to see more examples, go to [EXAMPLES.md](https://github.com/martinval11/commandkey/blob/main/EXAMPLES.md)
 
 ## Customization
 
@@ -127,8 +127,8 @@ bun dev
 ## Coming Soon...
 
 - [x] Add a search filter
-- [x] Styles Customization (done)
-- [ ] Animations (In Progress)
+- [x] Styles Customization
+- [ ] Animations
 
 ## License
 
