@@ -136,6 +136,6 @@ export default function App() {
 ```
 
 ## Coming Soon...
-[x] Add a search filter
-[ ] Tailwind Customization
-[ ] Animations
+- [x] Add a search filter
+- [ ] Tailwind Customization
+- [ ] Animations
