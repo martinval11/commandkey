@@ -1,4 +1,5 @@
 # Command Key
+Pre Alpha Stage, DO NOT USE
 
 ## Example Usage
 ```
@@ -24,7 +25,7 @@ function App() {
   const [open, setOpen] = useState(false);
   const [filteredList, setFilteredList] = useState(itemList);
 
-  const filterBySearch = (event: any) => {
+  const filterBySearch = (event) => {
     const query = event.target.value;
     let updatedList = [...itemList];
 
