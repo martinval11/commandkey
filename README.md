@@ -1,5 +1,6 @@
 # Command Key
-Pre Alpha Stage, Use it at your own risk.
+> [!CAUTION]
+> Pre Alpha Stage, Use it at your own risk.
 
 ![screenshot](https://github.com/martinval11/commandkey/blob/main/assets/screenshot.png?raw=true)
 
@@ -21,7 +22,7 @@ npx tailwindcss init
 ```
 
 tailwind.config.js
-```
+```js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -44,7 +45,7 @@ index.css (Your global CSS file in your project)
 ```
 
 ## Usage
-```
+```js
 import { Command } from 'commandkey';
 import { CommandList } from 'commandkey';
 import { CommandInput } from 'commandkey';
@@ -73,7 +74,7 @@ export default function App() {
 ```
 
 ## Example Usage with a Search Filter
-```
+```js
 import { Command } from 'commandkey';
 import { CommandList } from 'commandkey';
 import { CommandInput } from 'commandkey';
