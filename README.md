@@ -126,7 +126,7 @@ bun dev
 ## Coming Soon...
 
 - [x] Add a search filter
-- [x] Styles Customization (Partialy done)
+- [x] Styles Customization (done)
 - [ ] Animations (In Progress)
 
 ## License
