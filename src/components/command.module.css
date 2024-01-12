@@ -1,0 +1,25 @@
+#modal {
+  -webkit-animation: fadeinout 0.2s ease-in-out forwards;
+  animation: fadeinout 0.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+

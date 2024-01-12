@@ -24,7 +24,7 @@ function App() {
     // Access input value
     const query = event.target.value;
     // Create copy of item list
-    var updatedList = [...itemList];
+    let updatedList = [...itemList];
     // Include all elements which includes the search query
     updatedList = updatedList.filter(
       (item) => item.toLowerCase().indexOf(query.toLowerCase()) !== -1
@@ -33,11 +33,13 @@ function App() {
     setFilteredList(updatedList);
   };
 
+  const openModal = () => {
+    setOpen(true);
+  }
   return (
     <>
       <h1>Command Key Demostration</h1>
-
-      <button onClick={() => setOpen(true)}>Open modal</button>
+      <button onClick={openModal}>Open modal</button>
 
       <Command open={open} onClose={() => setOpen(false)}>
         <CommandInput placeholder="Search" onChange={filterBySearch} />

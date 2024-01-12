@@ -1,3 +1,9 @@
-export const CommandList = ({ children }: { children: React.ReactNode }) => {
-  return <div className="grid">{children}</div>;
+export const CommandList = ({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return <div className={className}>{children}</div>;
 };
