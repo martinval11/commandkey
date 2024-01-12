@@ -52,9 +52,6 @@ If you want to see more examples, go to [EXAMPLES.md](EXAMPLES.md)
 
 ## Customization
 
-You can use the `style` attribute to customize the component, it's available in all components.
-
-### Syntax
 The recommended way is to use the `className` attribute to change the stylesheet using a normal CSS file:
 ```javascript
 <CommandInput className="custom-input" />
@@ -67,6 +64,10 @@ The recommended way is to use the `className` attribute to change the stylesheet
 ```
 
 Or you can use the `style` attribute to change the stylesheet inline:
+
+> [!CAUTION]
+> It's not recommended to use the `style` attribute. Because it will ignore all the default styles and you will have an unstyled button. 
+> If you want to maintain the default button structure, use the `className` attribute.
 ```javascript
 <CommandInput
   style={{

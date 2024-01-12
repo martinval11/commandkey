@@ -1,6 +1,6 @@
 # Examples
 
-## Example Usage with a Search Filter
+## Search Filter
 
 ```js
 import { Command } from 'commandkey';
