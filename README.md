@@ -1,5 +1,5 @@
 # Command Key
-Pre Alpha Stage, DO NOT USE
+Pre Alpha Stage, Use it at your own risk.
 
 ## Requirements
 - React 18
