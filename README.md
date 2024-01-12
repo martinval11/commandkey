@@ -1,7 +1,7 @@
 # Command Key
 Pre Alpha Stage, Use it at your own risk.
 
-![screenshot](https://github.com/martinval11/commandkey/blob/main/assets/commandkey.png?raw=true)
+![screenshot](https://github.com/martinval11/commandkey/blob/main/assets/screenshot.png?raw=true)
 
 ## Requirements
 - React 18
