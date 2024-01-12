@@ -9,7 +9,7 @@ export const CommandOption = ({
   mouseLeaveColor = 'rgb(24 24 27)',
   ...props
 }: {
-  value: string | number | readonly string[] | undefined;
+  value?: string | number | readonly string[] | undefined;
   id?: string;
   className?: string | any; // `any` in case you are using CSS Modules
   style?: React.CSSProperties;
