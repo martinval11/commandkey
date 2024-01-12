@@ -3,7 +3,7 @@ import { CommandList } from "./components/CommandList";
 import { CommandInput } from "./components/CommandInput";
 import { CommandOption } from "./components/CommandOption";
 
-export default {
+export {
   Command,
   CommandList,
   CommandInput,
