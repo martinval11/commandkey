@@ -5,13 +5,15 @@ export const Command = ({
   open,
   onClose,
   className = '',
-  containerClassName = '',
+  style = {},
+  styleBehind = {}, // Change the style behind the command modal (Such as the background)
   children,
 }: {
   open: boolean;
   onClose: () => void;
-  className?: string;
-  containerClassName?: string;
+  className?: string | any; // `any` in case you are using CSS Modules
+  style?: React.CSSProperties;
+  styleBehind?: React.CSSProperties;
   children: React.ReactNode;
 }) => {
   const escFunction = useCallback((event: KeyboardEvent) => {
@@ -30,10 +32,38 @@ export const Command = ({
 
   return open ? (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center [background-color:rgba(0,0,0,0.5)] ${containerClassName}`}
+      style={
+        Object.keys(styleBehind).length > 0
+          ? styleBehind
+          : {
+              position: 'fixed',
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
+              zIndex: 50,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            }
+      }
     >
       <div
-        className={`w-full max-w-md text-white border bg-zinc-900 border-zinc-800 rounded-md ${className}`}
+        className={className}
+        style={
+          Object.keys(style).length > 0
+            ? style
+            : {
+                width: '100%',
+                maxWidth: '448px',
+                color: '#fff',
+                border: '1px solid',
+                backgroundColor: 'rgb(24 24 27)',
+                borderColor: 'rgb(39 39 42)',
+                borderRadius: '6px',
+              }
+        }
         id={styles.modal}
       >
         <div>{children}</div>

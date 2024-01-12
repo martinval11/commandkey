@@ -1,9 +1,13 @@
-import { Command } from './components/Command';
-import { useState } from 'react';
+# Examples
 
-import { CommandList } from './components/CommandList';
-import { CommandInput } from './components/CommandInput';
-import { CommandOption } from './components/CommandOption';
+## Example Usage with a Search Filter
+
+```js
+import { Command } from 'commandkey';
+import { CommandList } from 'commandkey';
+import { CommandInput } from 'commandkey';
+import { CommandOption } from 'commandkey';
+import { useState } from 'react';
 
 const itemList = [
   'Apple',
@@ -16,30 +20,26 @@ const itemList = [
   'Tomato',
 ];
 
-function App() {
+export default function App() {
   const [open, setOpen] = useState(false);
   const [filteredList, setFilteredList] = useState(itemList);
 
-  const filterBySearch = (event: any) => {
-    // Access input value
+  const filterBySearch = (event) => {
     const query = event.target.value;
-    // Create copy of item list
     let updatedList = [...itemList];
-    // Include all elements which includes the search query
+
     updatedList = updatedList.filter(
       (item) => item.toLowerCase().indexOf(query.toLowerCase()) !== -1
     );
-    // Trigger render with updated values
+
     setFilteredList(updatedList);
   };
 
-  const openModal = () => {
-    setOpen(true);
-  };
   return (
     <>
       <h1>Command Key Demostration</h1>
-      <button onClick={openModal}>Open modal</button>
+
+      <button onClick={() => setOpen(true)}>Open modal</button>
 
       <Command open={open} onClose={() => setOpen(false)}>
         <CommandInput placeholder="Search" onChange={filterBySearch} />
@@ -47,7 +47,6 @@ function App() {
         <CommandList>
           {filteredList.map((item, index) => (
             <CommandOption
-            className="command-option"
               key={index}
               value={item}
               onClick={() => console.log(item)}
@@ -60,5 +59,5 @@ function App() {
     </>
   );
 }
+```
 
-export default App;
