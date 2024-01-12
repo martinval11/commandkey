@@ -7,8 +7,8 @@ A simple command menu for React.
 ![screenshot](https://github.com/martinval11/commandkey/blob/main/assets/screenshot.png?raw=true)
 
 ## Requirements
-- React
-- TailwindCSS
+- [React](https://react.dev/)
+- [Tailwind](https://tailwindcss.com/)
 
 ## Setup
 
