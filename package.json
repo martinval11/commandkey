@@ -1,7 +1,7 @@
 {
   "name": "commandkey",
   "description": "A simple command palette for React",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -50,5 +50,5 @@
   "bugs": {
     "url": "https://github.com/martinval11/commandkey/issues"
   },
-  "homepage": "https://github.com/martinval11/commandkey#readme"
+  "homepage": "https://commandkey.vercel.app/"
 }
