@@ -1,11 +1,11 @@
 # Command Key
 
-A simple command menu for React.
+A simple command palette for React.
 
 ![commandKeyLogo](https://github.com/martinval11/commandkey/blob/main/assets/favicon-256.png?raw=true)
 
 > [!WARNING]
-> Beta Stage, this may have some bugs, so if you find one, please report an issue.
+> Beta Stage, this may have some bugs, so if you find one please report the issue.
 
 ![screenshot](https://github.com/martinval11/commandkey/blob/main/assets/screenshot.png?raw=true)
 
