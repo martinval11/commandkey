@@ -4,7 +4,7 @@ A simple command menu for React.
 
 ![commandKeyLogo](https://github.com/martinval11/commandkey/blob/main/assets/favicon-256.png?raw=true)
 
-> [!CAUTION]
+> [!WARNING]
 > Beta Stage, this may have some bugs, so if you find one, please report an issue.
 
 ![screenshot](https://github.com/martinval11/commandkey/blob/main/assets/screenshot.png?raw=true)
