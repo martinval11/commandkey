@@ -48,10 +48,10 @@ If you want more details. Check the [documentation](https://commandkey.vercel.ap
 
 ## Contributing
 
-1. Fork and clone the repository:
+1. Clone the repository:
 
 ```bash
-git clone git@github.com:martinval11/commandkey.git
+git clone https://github.com/martinval11/commandkey.git
 ```
 
 2. Install dependencies:
