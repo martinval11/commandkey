@@ -41,7 +41,15 @@ export default function App() {
 
       <button onClick={() => setOpen(true)}>Open modal</button>
 
-      <Command open={open} onClose={() => setOpen(false)}>
+      <Command
+        open={open}
+        onClose={() => {
+          setOpen(false);
+
+          // Reset the filtered list with the default values
+          setFilteredList(itemList);
+        }}
+      >
         <CommandInput placeholder="Search" onChange={filterBySearch} />
 
         <CommandList>
@@ -60,4 +68,3 @@ export default function App() {
   );
 }
 ```
-

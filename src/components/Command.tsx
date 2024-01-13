@@ -1,10 +1,10 @@
 import { useCallback, useEffect } from 'react';
-import styles from './command.module.css';
 
 export const Command = ({
   open,
   onClose,
   className = '',
+  classNameBackground = '',
   style = {},
   styleBehind = {}, // Change the style behind the command modal (Such as the background)
   children,
@@ -12,6 +12,7 @@ export const Command = ({
   open: boolean;
   onClose: () => void;
   className?: string | any; // `any` in case you are using CSS Modules
+  classNameBackground?: string | any;
   style?: React.CSSProperties;
   styleBehind?: React.CSSProperties;
   children: React.ReactNode;
@@ -32,6 +33,7 @@ export const Command = ({
 
   return open ? (
     <div
+      className={classNameBackground}
       style={
         Object.keys(styleBehind).length > 0
           ? styleBehind
@@ -64,7 +66,6 @@ export const Command = ({
                 borderRadius: '6px',
               }
         }
-        id={styles.modal}
       >
         <div>{children}</div>
       </div>

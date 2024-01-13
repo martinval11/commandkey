@@ -41,13 +41,22 @@ function App() {
       <h1>Command Key Demostration</h1>
       <button onClick={openModal}>Open modal</button>
 
-      <Command open={open} onClose={() => setOpen(false)}>
+      <Command
+        open={open}
+        onClose={() => {
+          setOpen(false);
+
+          // Reset search with the original list
+          setFilteredList(itemList);
+        }}
+        className="command"
+      >
         <CommandInput placeholder="Search" onChange={filterBySearch} />
 
         <CommandList>
           {filteredList.map((item, index) => (
             <CommandOption
-            className="command-option"
+              className="command-option"
               key={index}
               value={item}
               onClick={() => console.log(item)}
