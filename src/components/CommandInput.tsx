@@ -1,3 +1,5 @@
+import { CommandInputProps } from './types';
+
 /**
  * @description
  * Input of the modal, you can use it as a search bar
@@ -14,13 +16,7 @@ export const CommandInput = ({
   style = {},
   className = '',
   ...props
-}: {
-  onChange?: (...args: any) => void;
-  placeholder?: string;
-  style?: React.CSSProperties;
-  className?: string | any; // `any` in case you are using CSS Modules
-  props?: any;
-}) => {
+}: CommandInputProps) => {
   return (
     <input
       style={
@@ -40,6 +36,7 @@ export const CommandInput = ({
       placeholder={placeholder}
       type="search"
       autoFocus
+      autoComplete="off"
       className={className}
       onChange={onChange}
       {...props}

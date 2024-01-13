@@ -1,4 +1,5 @@
 import { useCallback, useEffect } from 'react';
+import { CommandProps } from './types';
 
 /**
  * @description
@@ -20,15 +21,7 @@ export const Command = ({
   style = {},
   styleBackground = {}, // Change the style behind the command modal (Such as the background)
   children,
-}: {
-  open: boolean;
-  onClose: () => void;
-  className?: string | any; // `any` in case you are using CSS Modules
-  classNameBackground?: string | any;
-  style?: React.CSSProperties;
-  styleBackground?: React.CSSProperties;
-  children: React.ReactNode;
-}) => {
+}: CommandProps) => {
   const escFunction = useCallback((event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       onClose();
@@ -76,6 +69,7 @@ export const Command = ({
                 backgroundColor: 'rgb(24 24 27)',
                 borderColor: 'rgb(39 39 42)',
                 borderRadius: '6px',
+                boxShadow: '0 25px 50px -12px #00000040',
               }
         }
       >

@@ -1,5 +1,6 @@
 {
   "name": "commandkey",
+  "description": "A simple command palette for React",
   "version": "0.2.1",
   "type": "module",
   "scripts": {
