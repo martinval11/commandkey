@@ -1,3 +1,11 @@
+/**
+ * @description
+ * Container for the CommandOptions' Components
+ * @param children: React.ReactNode;
+ * @param className?: string | any;
+ * @param style?: React.CSSProperties;
+ */
+
 export const CommandList = ({
   children,
   className = '',

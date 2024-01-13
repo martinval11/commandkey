@@ -1,12 +1,24 @@
 import { useCallback, useEffect } from 'react';
 
+/**
+ * @description
+ * Container of the modal
+ * @param open: boolean
+ * @param onClose: () => void
+ * @param className: string
+ * @param classNameBackground: string
+ * @param style: React.CSSProperties
+ * @param styleBackground: React.CSSProperties
+ * @param children: React.ReactNode
+ */
+
 export const Command = ({
   open,
   onClose,
   className = '',
   classNameBackground = '',
   style = {},
-  styleBehind = {}, // Change the style behind the command modal (Such as the background)
+  styleBackground = {}, // Change the style behind the command modal (Such as the background)
   children,
 }: {
   open: boolean;
@@ -14,7 +26,7 @@ export const Command = ({
   className?: string | any; // `any` in case you are using CSS Modules
   classNameBackground?: string | any;
   style?: React.CSSProperties;
-  styleBehind?: React.CSSProperties;
+  styleBackground?: React.CSSProperties;
   children: React.ReactNode;
 }) => {
   const escFunction = useCallback((event: KeyboardEvent) => {
@@ -35,8 +47,8 @@ export const Command = ({
     <div
       className={classNameBackground}
       style={
-        Object.keys(styleBehind).length > 0
-          ? styleBehind
+        Object.keys(styleBackground).length > 0
+          ? styleBackground
           : {
               position: 'fixed',
               top: 0,

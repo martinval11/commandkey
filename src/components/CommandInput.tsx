@@ -1,3 +1,13 @@
+/**
+ * @description
+ * Input of the modal, you can use it as a search bar
+ * @param onChange: (...args: any) => void;
+ * @param placeholder: string;
+ * @param style: React.CSSProperties;
+ * @param className: string | any;
+ * @param props: any;
+ */
+
 export const CommandInput = ({
   onChange,
   placeholder,

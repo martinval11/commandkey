@@ -1,5 +1,18 @@
 import { useState } from 'react';
 
+/**
+ * @description
+ * This component is used to create a button inside the CommandList
+ * @param value: string | number | readonly string[] | undefined;
+ * @param id: string;
+ * @param className: string | any;
+ * @param style: React.CSSProperties;
+ * @param mouseOverColor: string; // To customize hover background using JavaScript
+ * @param mouseLeaveColor: string; // To customize no hover background using JavaScript
+ * @param children: React.ReactNode;
+ * @param onClick: () => void;
+ */
+
 export const CommandOption = ({
   value,
   children,
