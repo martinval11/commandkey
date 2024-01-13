@@ -9,10 +9,6 @@ A simple command menu for React.
 
 ![screenshot](https://github.com/martinval11/commandkey/blob/main/assets/screenshot.png?raw=true)
 
-## Requirements
-
-- [React](https://react.dev/)
-
 ## Setup
 
 ### Install
@@ -87,6 +83,7 @@ bun dev
 ## Tech Stack
 
 - [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## To Do
 
