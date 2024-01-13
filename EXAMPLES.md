@@ -3,10 +3,7 @@
 ## Search Filter
 
 ```js
-import { Command } from 'commandkey';
-import { CommandList } from 'commandkey';
-import { CommandInput } from 'commandkey';
-import { CommandOption } from 'commandkey';
+import { Command, CommandList, CommandInput, CommandOption } from 'commandkey';
 import { useState } from 'react';
 
 const itemList = [
