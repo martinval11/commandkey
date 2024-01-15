@@ -1,0 +1,59 @@
+.commandBackground {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  animation: fadein 0.1s ease-in-out forwards;
+}
+
+.command {
+  width: 100%;
+  max-width: 448px;
+  color: #fff;
+  border: 1px solid rgb(39 39 42);
+  background: rgb(24 24 27);
+  border-radius: 6px;
+  box-shadow: 0 25px 50px -12px #00000040;
+  animation: fadein 0.2s ease-in-out forwards;
+}
+
+.commandOption {
+  width: 100%;
+  padding: 16px;
+  text-align: left;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: rgb(24 24 27);
+
+  &:hover {
+    background: rgb(39 39 42);
+  }
+}
+
+.commandInput {
+  outline: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(39 39 42);
+  background-color: rgb(24 24 27);
+  color: #fff;
+  padding: 16px;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
