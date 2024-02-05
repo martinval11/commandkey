@@ -23,6 +23,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/commandkey/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
