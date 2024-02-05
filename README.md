@@ -8,9 +8,7 @@ A simple command palette for React.
 
 ## Setup
 
-### Install
-
-### Tailwind CSS Setup
+### Install Tailwind CSS
 To use CommandKey, you need to install Tailwind CSS for styling.
 
 ```sh
@@ -41,7 +39,8 @@ Add directives to your CSS:
 @tailwind utilities;
 ```
 
-Now install commandkey to start using it:
+
+### Install CommandKey
 
 ```sh
 npm install commandkey
