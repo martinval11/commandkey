@@ -36,6 +36,7 @@ function App() {
   const openModal = () => {
     setOpen(true);
   };
+
   return (
     <>
       <h1>Command Key Demostration</h1>
@@ -49,14 +50,13 @@ function App() {
           // Reset search with the original list
           setFilteredList(itemList);
         }}
-        className="command"
+        overlayClassName={'bg-pink-800'}
       >
         <CommandInput placeholder="Search" onChange={filterBySearch} />
 
         <CommandList>
           {filteredList.map((item, index) => (
             <CommandOption
-              className="command-option"
               key={index}
               value={item}
               onClick={() => console.log(item)}

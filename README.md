@@ -4,16 +4,46 @@ A simple command palette for React.
 
 ![commandKeyLogo](https://github.com/martinval11/commandkey/blob/main/assets/favicon-256.png?raw=true)
 
-> [!WARNING]
-> Beta Stage, this may have some bugs, so if you find one please report the issue.
-
 ![screenshot](https://github.com/martinval11/commandkey/blob/main/assets/screenshot.png?raw=true)
 
 ## Setup
 
 ### Install
 
-```bash
+### Tailwind CSS Setup
+To use CommandKey, you need to install Tailwind CSS for styling.
+
+```sh
+npm install -D tailwindcss postcss autoprefixer tailwind-merge
+npx tailwindcss init -p
+```
+
+Configure tailwindcss:
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Add directives to your CSS:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Now install commandkey to start using it:
+
+```sh
 npm install commandkey
 ```
 
@@ -50,13 +80,13 @@ If you want more details. Check the [documentation](https://commandkey.vercel.ap
 
 1. Clone the repository:
 
-```bash
+```sh
 git clone https://github.com/martinval11/commandkey.git
 ```
 
 2. Install dependencies:
 
-```bash
+```sh
 npm install
 # or
 yarn install
@@ -68,7 +98,7 @@ bun install
 
 3. Run [vite](https://vitejs.dev/):
 
-```bash
+```sh
 npm run dev
 # or
 yarn dev
@@ -84,13 +114,7 @@ bun dev
 
 - [React](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-
-## To Do
-
-- [x] Add a search filter
-- [x] Styles Customization
-- [x] Animations
-- [x] Landing Page with Docs [https://commandkey.vercel.app/](https://commandkey.vercel.app/)
+- [Tailwind](https://tailwindcss.com/)
 
 ## License
 

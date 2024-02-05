@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { CommandOptionProps } from './types';
 
 /**
@@ -6,45 +6,23 @@ import { CommandOptionProps } from './types';
  * This component is used to create a button inside the CommandList
  * @param value: string | number | readonly string[] | undefined;
  * @param id: string;
- * @param className: string | any;
- * @param style: React.CSSProperties;
- * @param mouseOverColor: string; // To customize hover background using JavaScript
- * @param mouseLeaveColor: string; // To customize no hover background using JavaScript
- * @param children: React.ReactNode;
- * @param onClick: () => void;
+ * @param className?: string | any;
+ * @param onClick?: () => void;
  */
 
 export const CommandOption = ({
   value,
   children,
   className = '',
-  style = {},
-  mouseOverColor = 'rgb(39 39 42)',
-  mouseLeaveColor = 'rgb(24 24 27)',
   ...props
 }: CommandOptionProps) => {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <button
       value={value}
-      style={
-        Object.keys(style).length > 0
-          ? style
-          : {
-              width: '100%',
-              padding: '16px',
-              textAlign: 'left',
-              color: '#fff',
-              outline: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              backgroundColor: hovered ? mouseOverColor : mouseLeaveColor,
-            }
-      }
-      onMouseOver={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className={className}
+      className={twMerge(
+        'w-full p-4 text-left text-white border-none outline-none cursor-pointer hover:bg-zinc-800',
+        className
+      )}
       {...props}
     >
       {children}

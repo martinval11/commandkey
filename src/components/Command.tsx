@@ -1,4 +1,5 @@
 import { useCallback, useEffect } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { CommandProps } from './types';
 
 /**
@@ -6,10 +7,8 @@ import { CommandProps } from './types';
  * Container of the modal
  * @param open: boolean
  * @param onClose: () => void
- * @param className: string
- * @param classNameBackground: string
- * @param style: React.CSSProperties
- * @param styleBackground: React.CSSProperties
+ * @param className?: string
+ * @param overlayClassName?: string
  * @param children: React.ReactNode
  */
 
@@ -17,9 +16,7 @@ export const Command = ({
   open,
   onClose,
   className = '',
-  classNameBackground = '',
-  style = {},
-  styleBackground = {}, // Change the style behind the command modal (Such as the background)
+  overlayClassName = '',
   children,
 }: CommandProps) => {
   const escFunction = useCallback((event: KeyboardEvent) => {
@@ -38,40 +35,16 @@ export const Command = ({
 
   return open ? (
     <div
-      className={classNameBackground}
-      style={
-        Object.keys(styleBackground).length > 0
-          ? styleBackground
-          : {
-              position: 'fixed',
-              top: 0,
-              right: 0,
-              bottom: 0,
-              left: 0,
-              zIndex: 50,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            }
-      }
+      className={twMerge(
+        'fixed top-0 right-0 bottom-0 left-0 z-50 flex items-center justify-center bg-black bg-opacity-50',
+        overlayClassName
+      )}
     >
       <div
-        className={className}
-        style={
-          Object.keys(style).length > 0
-            ? style
-            : {
-                width: '100%',
-                maxWidth: '448px',
-                color: '#fff',
-                border: '1px solid',
-                backgroundColor: 'rgb(24 24 27)',
-                borderColor: 'rgb(39 39 42)',
-                borderRadius: '6px',
-                boxShadow: '0 25px 50px -12px #00000040',
-              }
-        }
+        className={twMerge(
+          'w-full max-w-md text-white border border-solid shadow-md border-zinc-800 bg-zinc-900 rounded-md',
+          className
+        )}
       >
         <div>{children}</div>
       </div>

@@ -1,3 +1,4 @@
+import { twMerge } from 'tailwind-merge';
 import { CommandListProps } from './types';
 
 /**
@@ -5,16 +6,14 @@ import { CommandListProps } from './types';
  * Container for the CommandOptions' Components
  * @param children: React.ReactNode;
  * @param className?: string | any;
- * @param style?: React.CSSProperties;
  */
 
 export const CommandList = ({
   children,
   className = '',
-  style = {},
 }: CommandListProps) => {
   return (
-    <div className={className} style={style}>
+    <div className={twMerge('w-full', className)}>
       {children}
     </div>
   );
